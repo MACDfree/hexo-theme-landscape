@@ -1,8 +1,9 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
+  主页: /
+  归档: /archives
 rss: /atom.xml
+github: https://github.com/MACDfree
 
 # Content
 excerpt_link: Read More
