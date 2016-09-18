@@ -1,6 +1,10 @@
 <% if (pagination == 2){ %>
   <% page.posts.each(function(post){ %>
-    <%- partial('article', {post: post, index: true}) %>
+    <% var data=post.categories.data; var ishtml=false; %>
+    <% for(var i in data){if(data[i].name=="html"){ishtml=true;break;}} %>
+    <% if (!ishtml){ %>
+      <%- partial('article', {post: post, index: true}) %>
+    <% } %>
   <% }) %>
 <% } else { %>
   <% var last; %>
