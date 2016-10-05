@@ -25,6 +25,11 @@
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
       <%- partial('post/tag') %>
+      <% if (!index){ %>
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="<%= post._id %>" data-title="<%= post.title %>" data-url="<%- post.permalink %>"></div>
+        <!-- 多说评论框 end -->
+      <% } %>
     </footer>
   </div>
   <% if (!index){ %>
